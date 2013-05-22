@@ -1,5 +1,7 @@
-source :rubygems
+source 'https://rubygems.org'
 
 gem 'rack'
 gem 'sidekiq'
-gem 'sidekiq-failures'
+gem 'sinatra'
+gem 'slim'
+gem 'sidekiq-failures', github: 'mhfs/sidekiq-failures'

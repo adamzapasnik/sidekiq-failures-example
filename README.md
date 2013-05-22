@@ -19,7 +19,7 @@ bundle
 Run sidekiq-web:
 
 ```
-rackup
+bundle exec rackup
 ```
 
 Access `http://localhost:9292/`. You'll see 5 enqueued jobs. 3 GoodWorkers and 2 BadWorkers. You're Failures tab should be empty.
@@ -27,7 +27,7 @@ Access `http://localhost:9292/`. You'll see 5 enqueued jobs. 3 GoodWorkers and 2
 It's time to consume them:
 
 ```
-sidekiq -r ./sidekiq-failures-example.rb
+bundle exec sidekiq -r ./sidekiq-failures-example.rb
 ```
 
 Refresh your browser and you should now see failures appearing as the BadWorkers are failing and being retried.
